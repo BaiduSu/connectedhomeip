@@ -97,8 +97,9 @@ public:
     // public functions for ReliableMessageProtocol internal usage
     static ReliableMessageManager & GetManager();
 
-    CHIP_ERROR SendMessage(ReliableMessageContext *context, System::PacketBuffer * msgBuf, uint16_t sendFlags);
-    CHIP_ERROR SendMessage(ReliableMessageContext *context, uint32_t profileId, uint8_t msgType, System::PacketBuffer * msgBuf, BitFlags<uint16_t, SendMessageFlags> sendFlags);
+    CHIP_ERROR SendMessage(ReliableMessageContext * context, System::PacketBuffer * msgBuf, uint16_t sendFlags);
+    CHIP_ERROR SendMessage(ReliableMessageContext * context, uint32_t profileId, uint8_t msgType, System::PacketBuffer * msgBuf,
+                           BitFlags<uint16_t, SendMessageFlags> sendFlags);
 
 private:
     ReliableMessageProtocolConfig mConfig; /**< ReliableMessageProtocol configuration. */

@@ -120,8 +120,8 @@ private:
     friend class ReliableMessageManager;
 
     ReliableMessageProtocolConfig mConfig;
-    uint16_t mNextAckTimeTick;             // Next time for triggering Solo Ack
-    uint16_t mThrottleTimeoutTick;         // Timeout until when Throttle is On when ThrottleEnabled is set
+    uint16_t mNextAckTimeTick;     // Next time for triggering Solo Ack
+    uint16_t mThrottleTimeoutTick; // Timeout until when Throttle is On when ThrottleEnabled is set
     uint32_t mPendingPeerAckId;
 
     ReliableMessageDelegate & mDelegate;
